@@ -5,7 +5,7 @@
 package tema5;
 import java.util.Scanner;
 
-public class Mcd {
+public class MaximoComunDivisor {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner (System.in);
 		System.out.println("Dame el primer numero (natural).");
@@ -23,7 +23,6 @@ public class Mcd {
 		int mcd = 1;
 		String divisoresP = "";
 		String divisoresQ = "";
-		String cadenaMcd = "";
 		char divisorP = '1';
 		int numDivisorP;
 		String cadenaDivP = "";
