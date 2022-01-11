@@ -1,4 +1,4 @@
-/*
+/**
 8) Dados m elementos de un conjunto que se desean agrupar de n en n, el número de
 combinaciones posibles es m!/(n!*(m-n)!), siendo siempre m >=n (hay que validarlo)
 Escribir un método para que, dados como parámetros m y n, nos calcule el número
