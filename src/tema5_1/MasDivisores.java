@@ -5,7 +5,7 @@ diga “P tiene más divisores que Q” o viceversa.
 Este programa debe llamar a un método que calcule los divisores de un número,
 lo aplique para P y para Q y luego compare y decida.
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 public class MasDivisores {
 	public static void main(String[] args) {

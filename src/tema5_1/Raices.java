@@ -16,7 +16,7 @@ b
 2
 -4*a*c > 0.
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 public class Raices {
 

@@ -2,7 +2,7 @@
 6) Escribir un método que reciba dos parámetros enteros p y q y devuelva el mínimo
 común múltiplo de ambos.
  */
-package tema5;
+package tema5_1;
 
 import java.util.Scanner;
 

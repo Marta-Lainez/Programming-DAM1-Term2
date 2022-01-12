@@ -5,7 +5,7 @@ sí mismo y por la unidad)
 Desarrollar este programa creando un método llamado primo que devuelva true
 si el número es primo y false si no lo es
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 public class Primos {
 	public static void main(String[] args) {

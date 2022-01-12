@@ -4,7 +4,7 @@ combinaciones posibles es m!/(n!*(m-n)!), siendo siempre m >=n (hay que validarl
 Escribir un método para que, dados como parámetros m y n, nos calcule el número
 de combinaciones de m sobre n. Usad el método factorial del ejercicio 3.
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 public class CombinacionesPosibles {
 

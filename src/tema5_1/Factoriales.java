@@ -5,7 +5,7 @@ factorial
 La función a construir aquí se llamará factorial. El método main solo debe leer
 un valor y devolver su factorial (versión iterativa).
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 
 public class Factoriales {

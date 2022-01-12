@@ -7,7 +7,7 @@ de una figura, una opción: un dato entero que será 1, 2 ó 3. El método debe devo
    4/3*PI*r3
 NOTA: PI es la constante 3,14159
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 public class RadioAFigura {
 

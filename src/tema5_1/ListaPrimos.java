@@ -3,7 +3,7 @@
 todos los numero primos hasta dicho número incluido.
 Hacer este programa usando el método primo que ya tenéis construido.
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 public class ListaPrimos {
 

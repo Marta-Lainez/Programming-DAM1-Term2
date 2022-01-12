@@ -2,7 +2,7 @@
 5) Escribir un método que con dos parámetros enteros p y q nos devuelva el m.c.d.
 (máximo común divisor) de ambos.
  */
-package tema5;
+package tema5_1;
 import java.util.Scanner;
 
 public class MaximoComunDivisor {
