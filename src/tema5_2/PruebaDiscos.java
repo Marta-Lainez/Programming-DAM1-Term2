@@ -7,23 +7,25 @@ Titulo, no de canciones, precio y fecha de compra.
 package tema5_2;
 
 import java.util.Scanner;
-
 public class PruebaDiscos {
 
 	public static void main (String[]args){
-		Discos myObj = new Discos();
 		Scanner teclado = new Scanner(System.in);
-		System.out.print("Titulo del disco: ");
-		myObj.titulo = teclado.nextLine();
-		System.out.print("Numero de canciones del disco: ");
-		myObj.numCanciones = teclado.nextInt();
-		System.out.print("Precio del disco: ");
-		myObj.precio = teclado.nextInt();
-		System.out.print("Fecha de compra del disco: ");
-		myObj.fechaCompra = teclado.nextLine();
+		Discos myObj = new Discos();
 		
-		System.out.println("Titulo: " + myObj.titulo + "\r\n" + "Numero de canciones: " + myObj.numCanciones
-				+ "\r\n" + "Precio: " + myObj.precio + "\r\n" + "Fecha de compra: " + myObj.fechaCompra);
+		
+		System.out.print("Titulo del disco: ");
+		myObj.setTitulo(teclado.nextLine());
+		System.out.print("Numero de canciones del disco: ");
+		myObj.setNumCanciones(teclado.nextInt());
+		System.out.print("Precio del disco: ");
+		myObj.setPrecio(teclado.nextInt());
+		teclado.nextLine();
+		System.out.print("Fecha de compra del disco: ");
+		myObj.setFechaCompra(teclado.nextLine());
+		
+		System.out.println("Titulo: " + myObj.getTitulo() + "\r\n" + "Numero de canciones: " + myObj.getNumCanciones()
+				+ "\r\n" + "Precio: " + myObj.getPrecio() + "\r\n" + "Fecha de compra: " + myObj.getFechaCompra());
 		
 	}
 

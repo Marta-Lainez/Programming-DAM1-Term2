@@ -8,28 +8,44 @@ Todos los getters y setters se crean en una clase aparte sin un main. Luego las 
 utilizadas en otras clases dentro de este paquete.
 */
 package tema5_2;
-import java.util.Scanner;
+
 public class Discos {
-	Scanner teclado = new Scanner(System.in);
+
 	
 	private String titulo;
+	private int numCanciones;
+	private int precio;
+	private String fechaCompra;
+	
+	// getter y setter de titulo
 	public String getTitulo() {
 		return titulo;
 	}
+	public void setTitulo (String newTitulo) {
+		this.titulo = newTitulo;
+	}
 	
-	private int numCanciones;
+	// getter y setter de num canciones
 	public int getNumCanciones() {
 		return numCanciones;
 	}
-	
-	private int precio;
-	public int getPrecio() {
-		return precio;
+	public void setNumCanciones(int newNumCanciones) {
+		this.numCanciones = newNumCanciones;
 	}
 	
-	private String fechaCompra;
+	// getter y setter de precio
+	public int getPrecio () {
+		return precio;
+	}
+	public void setPrecio(int newPrecio) {
+		this.precio = newPrecio;
+	}
+	
+	//getter y setter de fecha compra
 	public String getFechaCompra() {
 		return fechaCompra;
 	}
-	
+	public void setFechaCompra(String newFechaCompra) {
+		this.fechaCompra = newFechaCompra;
+	}
 }
