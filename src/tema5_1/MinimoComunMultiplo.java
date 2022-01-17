@@ -20,7 +20,6 @@ public class MinimoComunMultiplo {
 		//En vez de las 2 lineas anteriores puedo escribir la siguiente que hara lo mismo:
 		//System.out.println("El minimo comun divisor de " + numeroP + " y " + numeroQ + " es " + mcm(numeroP, numeroQ) + ".");
 	}
-	
 	static int mcm(int numeroP, int numeroQ) {
 		int mcm = 1; // Inicio mcm en 1 porque este es el minimo valor que mcm puede tomar.
 		int contadorDivQ = 2; // Iniciamos contador de divisores de Q en 2 porque es el minimo valor despues de 1 que mcm puede tener

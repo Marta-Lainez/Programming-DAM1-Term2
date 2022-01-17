@@ -11,6 +11,7 @@ public class PruebaDiscos {
 
 	public static void main (String[]args){
 		Scanner teclado = new Scanner(System.in);
+		
 		Discos myObj = new Discos();
 		
 		

@@ -12,5 +12,4 @@ public class PruebaEmpleado {
 		Empleado miEmpleado = new Empleado();
 		miEmpleado.verDatos();
 	}
-
 }
