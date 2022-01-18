@@ -22,8 +22,8 @@ public class Indicador {
 		valor = 0;
 	}
 	// Metodo que cambia el valor de ese atributo a otro valor
+	
 	public int modificarValor() {
-		
 		setValor(60);
 		return getValor();
 	}
