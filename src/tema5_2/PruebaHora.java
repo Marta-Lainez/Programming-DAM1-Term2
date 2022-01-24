@@ -14,8 +14,8 @@ public class PruebaHora {
 		
 		//Probamos las sumas
 		miHora.sumaSegundos(0);
-		miHora.sumaMinutos(0);
-		miHora.sumaHoras(25);
+		miHora.sumaMinutos(80);
+		miHora.sumaHoras(260);
 		System.out.println(miHora.getHora() + ":" + miHora.getMinutos() + ":" + miHora.getSegundos());
 	}
 

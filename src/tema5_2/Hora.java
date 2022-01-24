@@ -12,6 +12,9 @@ public class Hora {
 	private int minutos;
 	private int segundos;
 	
+	//int [] vector = new int [4];
+	//int [][] matriz = new int [3][4];
+	
 	public void setHora (int newHora) {
 		this.hora = newHora;
 	}
@@ -37,6 +40,8 @@ public class Hora {
 		segundos = 0;
 	}
 	
+	// Metodo para sumar segundos de forma eficiente. Si desbordan los minutos y las horas, hace los modulos
+	// y las sumas correspondientes para que la hora sea correcta
 	public void sumaSegundos(int extra) {
 		int modulo;
 		int cociente;
@@ -44,9 +49,9 @@ public class Hora {
 			modulo = (extra + getSegundos()) % 60;
 			cociente = (extra + getSegundos()) / 60;
 			setSegundos(getSegundos() + modulo);
-			setMinutos(getMinutos() + cociente);
-			if (getMinutos() > 60) {
-				extra = getMinutos() % 60;
+			//setMinutos(getMinutos() + cociente);
+			if (cociente > 60) {
+				extra = cociente;
 				sumaMinutos(extra);
 			}
 		}
@@ -61,11 +66,13 @@ public class Hora {
 			modulo = (extra + getMinutos()) % 60;
 			cociente = (extra + getMinutos()) / 60;
 			setMinutos(getMinutos() + modulo);
-			setHora(getHora() + cociente);
-			if (getHora() > 60) {
-				extra = getHora() % 24;
+			//setHora(getHora() + cociente);
+			if (cociente > 24) {
+				extra = cociente;
 				sumaHoras(extra);
 			}
+			else 
+				setHora(getHora() + cociente);
 		
 		}
 		else 
@@ -73,7 +80,6 @@ public class Hora {
 	}
 	
 	public void sumaHoras(int extra) {
-		int modulo;
 		if (getHora() + extra > 24) {
 			setHora((getHora() + extra) % 24);
 		}
