@@ -10,7 +10,6 @@ package tema6;
 import java.util.Scanner;
 public class Coleccion {
 	
-	CopiaDiscos[] miDisco = new CopiaDiscos[100];
 	int indice;
 	
 	public CopiaDiscos[] rellenaDiscos (int entradas) {
