@@ -8,6 +8,7 @@ package tema6;
 
 public class Ejercicio6 {
 	
+	// Metodo que crea una lista de 5 elementos que son 5 nombres
 	static String[] listaNombres () {
 		String[] lista = new String [5];
 		for (int i = 0; i < 5; i++) {
@@ -29,6 +30,8 @@ public class Ejercicio6 {
 		}
 		return lista;
 	}
+	// Metodo que devuelve un vector de 50 elementos al que les da un numero en orden y un nombre aleatorio
+	// de la lista del metodo anterior
 	static Empleado[] listaEmpleados(String[] listaLlena) {
 		Empleado[] lista = new Empleado[50];
 		for (int i = 0; i < 50; i++) {
@@ -43,6 +46,7 @@ public class Ejercicio6 {
 
 		String[] listaLlena = listaNombres();
 		Empleado[] listaDatos = listaEmpleados(listaLlena);
+		// Imprimimos los datos del interior de nuestro vector final
 		for (int i = 0; i < 50; i++) {
 		System.out.println("Número empleado: " + listaDatos[i].getNumero() + " Nombre Empleado: " + listaDatos[i].getNombre());	
 		}

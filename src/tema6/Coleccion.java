@@ -12,8 +12,9 @@ public class Coleccion {
 	
 	int indice;
 	
+	// Creamos un metodo que rellena un vector de datos hasta donde el usuario ha indicado (entradas)
+	// con los mismos datos
 	public CopiaDiscos[] rellenaDiscos (int entradas) {
-		
 		CopiaDiscos[] miNuevoDisco = new CopiaDiscos[100];
 		for (int i = 0; i < entradas; i++) {
 			miNuevoDisco[i] = new CopiaDiscos();
@@ -24,7 +25,8 @@ public class Coleccion {
 		}
 		return miNuevoDisco;
 	
-	}	
+	}
+	// En este metodo contamos los elementos del vector que no son null, es decir, que tienen informacion dentro
 	public int dameIndice (CopiaDiscos [] vector) {
 		for (int i = 0; i < vector.length; i++) {
 			if (vector[i] != null) {
@@ -38,6 +40,7 @@ public class Coleccion {
 		Scanner teclado = new Scanner (System.in);
 		System.out.println("Cuantas entradas quieres llenar?");
 		int entradas = teclado.nextInt();
+		
 		if (entradas < 0 || entradas > 100) {
 			System.out.println("Entradas no validas.");
 		}
