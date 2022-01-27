@@ -6,6 +6,12 @@ public class CopiaDiscos {
 	private int precio;
 	private String fechaCompra;
 	
+	public CopiaDiscos(){
+		titulo = "Vacío";
+		numCanciones = 0;
+		precio = 0;
+		fechaCompra = "0/0/0";
+	}
 	// getter y setter de titulo
 	public String getTitulo() {
 		return titulo;

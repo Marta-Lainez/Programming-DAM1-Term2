@@ -9,34 +9,43 @@ Diseña los métodos necesarios para gestionar la colección.
 package tema6;
 import java.util.Scanner;
 public class Coleccion {
-	Scanner teclado = new Scanner (System.in);
+	
 	CopiaDiscos[] miDisco = new CopiaDiscos[100];
 	int indice;
 	
-	public CopiaDiscos[] rellenaDiscos () {
-		System.out.println("Cuantas entradas quieres llenar?");
-		int entradas = teclado.nextInt();
+	public CopiaDiscos[] rellenaDiscos (int entradas) {
+		
 		CopiaDiscos[] miNuevoDisco = new CopiaDiscos[100];
 		for (int i = 0; i < entradas; i++) {
+			miNuevoDisco[i] = new CopiaDiscos();
 			miNuevoDisco[i].setTitulo("Eric");
 			miNuevoDisco[i].setNumCanciones(1);
 			miNuevoDisco[i].setPrecio(1);
 			miNuevoDisco[i].setFechaCompra("1/11/2003");
 		}
 		return miNuevoDisco;
-	}
-	public int dameIndice () {
-		for (int i = 0; i < miDisco.length; i++) {
-			if (miDisco[i] != null) {
+	
+	}	
+	public int dameIndice (CopiaDiscos [] vector) {
+		for (int i = 0; i < vector.length; i++) {
+			if (vector[i] != null) {
 				indice++;
 			}
 		}
 		return indice;
 	}
 	public static void main (String[]args) {
-		
-		for (int i = 0; i < 100; i++) {
-		
+		Coleccion miDisco = new Coleccion();
+		Scanner teclado = new Scanner (System.in);
+		System.out.println("Cuantas entradas quieres llenar?");
+		int entradas = teclado.nextInt();
+		if (entradas < 0 || entradas > 100) {
+			System.out.println("Entradas no validas.");
+		}
+		else {
+			CopiaDiscos[] vector = miDisco.rellenaDiscos(entradas);
+			int indice = miDisco.dameIndice(vector);
+			System.out.println("Discos almacenados en la colección: " + indice);
 		}
 	}
 }
