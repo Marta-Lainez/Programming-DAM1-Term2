@@ -15,7 +15,7 @@ métodos abstractos que tiene dicha clase.
 package tema7;
 import java.util.Scanner;
 abstract class Ej5ClaseAbstracta {
-	//abstract int num1; No se puede crear un atributo abstracto
+	// abstract int num1; No se puede crear un atributo abstracto
 	public void imprime() {
 		System.out.println("Imprimo en clase no abstracta.");
 	}

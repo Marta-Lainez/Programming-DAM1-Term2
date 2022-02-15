@@ -17,12 +17,13 @@ Una vez pedidos los datos, se visualizará la información de todos ellos.
 package tema7;
 import java.util.Scanner;
 public class Ej3Jefe extends Ej3Empleado{
-	protected int plusSalario;
+	protected double plusSalario;
 	protected String departamento;
+	protected double sueldoFinalJefe;
 	public Ej3Jefe() {
 		plusSalario = 250;
 		dameDepartamento();
-		sueldoFinal = sueldoBase * (porcentajeIncremento / 100) + plusSalario;
+		sueldoFinalJefe = sueldoFinal + plusSalario;
 	}
 	public void dameDepartamento() {
 		Scanner teclado = new Scanner(System.in);

@@ -16,7 +16,7 @@ Una vez pedidos los datos, se visualizará la información de todos ellos.
  */
 package tema7;
 import java.util.Scanner;
-public class Ejercicio3 {
+public class Ejercicio3{
 
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
@@ -27,8 +27,10 @@ public class Ejercicio3 {
 		int numJefes = teclado.nextInt();
 		// Importamos los metodos creados para generar los vectores de empleados y jefes
 		Ej3Empleado[] empleados = vectorEmpleados(numEmpleados);
-		Ej3Jefe[] Jefes = vectorJefes(numJefes);
-		int opcion;
+		Ej3Jefe[] jefes = vectorJefes(numJefes);
+		
+		// importo metodo menu
+		menu(empleados, jefes);
 	}
 	/**
 	 * Metodo que crea un vector de tipo Ej3Empleado del tamaño pedido en el main
@@ -76,14 +78,47 @@ public class Ejercicio3 {
 	 * Metodo que da al usuario la eleccion de modificar el sueldo base, el plus de los jefes, imprimir por pantalla o salida
 	 * @param opcion dada por el usuario por teclado para elegir la salida del menu
 	 */
-	static void menu(int opcion, double sueldoBase) {
-		System.out.println("MENU\nOpcion 1:\tModificar el sueldo base de todos los empleados\n Opcion 2:\tModificar el plus de todos los jefes\n."
-				+ "Opcion 3:\tVisualizar los datos de todos los empleados.\nOpcion 4:\t");
+	static void menu(Ej3Empleado[] empleados, Ej3Jefe[] jefes) {
+		//boolean repetir = true;
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("MENU\nOpcion 1:\tModificar el sueldo base de todos los empleados\nOpcion 2:\tModificar el plus de todos los jefes\n."
+				+ "Opcion 3:\tVisualizar los datos de todos los empleados\nOpcion 4:\tSalir");
+		int opcion = teclado.nextInt();
 		switch (opcion) {
 		case 1: // Modificar el sueldo base de todos los empleados.
-			
+			System.out.println("Nuevo sueldo base de todos los empleados: ");
+			double nuevoSalario = teclado.nextDouble();
+			for (int i = 0; i < empleados.length; i++) {
+				empleados[i].sueldoBase = nuevoSalario;
+				empleados[i].sueldoFinal = empleados[i].sueldoBase * + empleados[i].sueldoBase * (empleados[i].porcentajeIncremento / 100);
+			}
+			System.out.println("Nuevo sueldo base: " + nuevoSalario);
+			for (int i = 0; i < jefes.length; i++) {
+				empleados[i].sueldoBase = nuevoSalario;
+				jefes[i].sueldoFinalJefe = jefes[i].sueldoFinal + jefes[i].plusSalario;
+			}
+			break;
 		case 2: // Modificar el plus de todos los jefes.
-		
+			System.out.println("Nuevo plus de todos los jefes: ");
+			double nuevoPlus = teclado.nextDouble();
+			for (int i = 0; i < jefes.length; i++) {
+				jefes[i].plusSalario = nuevoPlus;
+				jefes[i].sueldoFinalJefe = jefes[i].sueldoFinal + jefes[i].plusSalario;
+			}
+			System.out.println("Nuevo plus en jefes: " + nuevoPlus);
+			break;
+		case 3: // Visualizar los datos de todos los empleados
+			System.out.println("Datos empleados:");
+			imprimeEmpleados(empleados);
+			System.out.println("Datos jefes:");
+			imprimeJefes(jefes);
+			break;
+		case 4: // Salir
+			System.out.println("Saliendo. Muchas gracias");
+			break;
+		default:
+			System.out.println("Esa no es una opción válida");
 		}
 	}
 

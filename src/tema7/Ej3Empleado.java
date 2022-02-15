@@ -27,7 +27,7 @@ public class Ej3Empleado {
 		nombreEmpresa = "Eléctrica, SA";
 		sueldoBase = 1000;
 		dameDatos();
-		sueldoFinal = sueldoBase * (porcentajeIncremento / 100);
+		sueldoFinal = sueldoBase * + sueldoBase * (porcentajeIncremento / 100);
 	}
 	public void dameDatos() {
 		Scanner teclado = new Scanner(System.in);
