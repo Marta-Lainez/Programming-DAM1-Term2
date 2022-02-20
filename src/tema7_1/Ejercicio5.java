@@ -12,7 +12,7 @@ abstracto.
 Haz que esa clase herede de la clase abstracta y comprueba que te obliga a insertar los
 métodos abstractos que tiene dicha clase.
  */
-package tema7;
+package tema7_1;
 
 public class Ejercicio5 extends Ej5ClaseAbstracta{
 

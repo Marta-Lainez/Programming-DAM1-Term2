@@ -5,7 +5,7 @@ Ejercicio 6
 clase Empleado y añade a la clase Jefe un método con esta cabecera: void pedirDatos().
 ¿Qué ocurre?
  */
-package tema7;
+package tema7_1;
 
 class Empleado{
 	String nombre;

@@ -7,7 +7,7 @@ datos, hay que visualizarlos.
 De los empleados nos interesa: nombre y sueldo.
 De los jefes nos interesa: nombre, sueldo, título y nombre del departamento del que es jefe.
  */
-package tema7;
+package tema7_1;
 
 import java.util.Scanner;
 

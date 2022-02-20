@@ -14,7 +14,7 @@ que el plus es el mismo para todos los jefes.
 El programa siempre partirá de un sueldo base de 1000€ y de un plus para los jefes de 250€.
 Una vez pedidos los datos, se visualizará la información de todos ellos.
  */
-package tema7;
+package tema7_1;
 import java.util.Scanner;
 public class Ej3Empleado {
 	protected String nombreEmpresa;

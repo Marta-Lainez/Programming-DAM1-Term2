@@ -30,7 +30,7 @@ clase abstracta. Comprueba que esto es posible; pero comprueba, también, que los
 que se pueden usar son los de la clase abstracta (que es el tipo del objeto) y no los métodos y
 datos de la clase que la hereda (la que se usó para hacer la instancia).
  */
-package tema7;
+package tema7_1;
 
 // Creo clase abtrscta vacia
 abstract class ClaseAbstracta{
