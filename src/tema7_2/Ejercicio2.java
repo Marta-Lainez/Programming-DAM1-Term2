@@ -45,6 +45,7 @@ class Trabajador /*implements InterfazTrabajador*/{
 		System.out.println("Edad del empleado:");
 		setEdad(teclado.nextInt());
 	}
+	
 	// Metodo que imprime todos los datos
 	public void visualizarTodosDatos() {
 		System.out.println();
@@ -72,16 +73,12 @@ class Administrativo extends Trabajador{
 	private String estudiosAcademicos;
 	private int numeroPc;
 	public Administrativo(){
-		pedirTodosDatos();
+		 Scanner teclado = new Scanner (System.in);
+		 System.out.println("Estudios Academicos:");
+		 setEstudiosAcademicos(teclado.nextLine());
+		 System.out.println("Numero de su ordenador:");
+		 setNumeroPc(teclado.nextInt());
 	}
-	// Metodo que pide los datos para luego insertarlos en el constructor
-	public void pedirTodosDatos(){
-		Scanner teclado = new Scanner (System.in);
-		System.out.println("Estudios Academicos:");
-		setEstudiosAcademicos(teclado.nextLine());
-		System.out.println("Numero de su ordenador:");
-		setNumeroPc(teclado.nextInt());	
-	}	
 	// Metodo que imprime todos los datos
 	public void visualizarTodosDatos() {
 		System.out.println("Administrativo:");
@@ -107,10 +104,10 @@ class Maquinista extends Trabajador{
 	private int numeroMaquina;
 	private int añosMaquina;
 	public Maquinista(){
-		pedirTodosDatos();
+		pedirDatos();
 	}
 	// Metodo que pide los datos para luego insertarlos en el constructor
-	public void pedirTodosDatos(){
+	public void pedirDatos(){ // Debe tener un nombre diferente al metodo edir datos del constructor
 		Scanner teclado = new Scanner (System.in);
 		System.out.println("Numero de su maquina:");
 		setNumeroMaquina(teclado.nextInt());
@@ -156,7 +153,7 @@ public class Ejercicio2 {
 		// NO SE POR QUE ME PIDE LOS DATOS DE CADA UNO 2 VECES CUANDO LE DIGO QUE HAY 1 DE CADA
 		// SI NO LES PONGO SUPER.VISUALIZARTODOSDATOS NO ME IMPRIME LOS DATOS BASE DE EMPLEADOS POR QUE?
 		// Lleno mi vector de administrativos
-		for (int i = 0; i < miVectorAdmin.length; i++) {
+		for (int i = 0; i < numAdmin; i++) {
 			miVectorAdmin[i] = new Administrativo();
 		}
 		// Lleno mi vector de maquinistas
