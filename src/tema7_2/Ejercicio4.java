@@ -28,6 +28,7 @@ cobra el profesor.
  */
 package tema7_2;
 
+import java.util.Scanner;
 
 abstract class Usuario{
 	private String nombre;
@@ -37,7 +38,7 @@ abstract class Usuario{
 	}
 	public abstract int devolverMasAlto();
 	public abstract String visualListaValores();
-	
+	public abstract void pedirTodosDatos();
 	// getters y setters de nombre y edad
 	public String getNombre() {
 		return nombre;
@@ -56,15 +57,35 @@ abstract class Usuario{
 class Profesor extends Usuario{
 	private String departamento;
 	private int numPlus;
-	private int[] diperoPlus;
-	final int devolverMasAlto() {
+	private int[] dineroPlus;
+	
+	// Metodo que pide los datos para luego insertarlos en el constructor
+	public void pedirTodosDatos(){
+		Scanner teclado = new Scanner (System.in);
+		System.out.println("\tNuevo empleado");
+		System.out.println("Nombre del empleado:");
+		setNombre(teclado.nextLine());
+		System.out.println("Edad del empleado:");
+		setEdad(teclado.nextInt());
+		//cuidado nextint antes de nextline 
+		System.out.println("Departamento:");
+		setDepartamento(teclado.nextLine());
+		System.out.println("Pluses:");
+		setNumPlus(teclado.nextInt());
+		for (int i = 0; i < getNumPlus(); i++) {
+			System.out.println("Cantidad plus " + i + ": ");
+			setDineroPlus(teclado.nextInt()[i]);
+		}
+	}
+	public int devolverMasAlto() {
 		int edadMasAlta = 0;
 		
 		return edadMasAlta;
 	}
-	final String vusialListaValores() {
-		String lista;
-		return lista;
+	
+	public String visualListaValores() {
+		
+		return "hola";
 	}
 	// getters y setters de departamento, numero de plues y dinero por pluses
 	public String getDepartamento() {
@@ -79,11 +100,12 @@ class Profesor extends Usuario{
 	public void setNumPlus(int numPlus) {
 		this.numPlus = numPlus;
 	}
-	public int[] getDiperoPlus() {
-		return diperoPlus;
+	public int[] getDineroPlus() {
+		return dineroPlus;
 	}
-	public void setDiperoPlus(int[] diperoPlus) {
-		this.diperoPlus = diperoPlus;
+	public void setDineroPlus(int[] newDineroPlus) {
+		newDineroPlus = new int [getNumPlus()];
+		this.dineroPlus = dineroPlus;
 	}
 	
 }
